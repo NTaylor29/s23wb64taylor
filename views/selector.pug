@@ -6,7 +6,7 @@ block content
   - const image_names = ["doc1", "doc2", "doc3", "doc4", "doc5"]
   div 
     .image-container 
-      - for (var n=0, n<3, n++) {
+      - for (var n=0, n<3, n++)
         - var num = Math.floor(Math.random() * 5)
         - var image_name = image_names(num)
         - var src = `/images/${image_name}.jpg`
@@ -14,4 +14,3 @@ block content
         - var height = 300
         - var width = 400
         img(src=src, alt=alt, height=height, width=width)
-      - }
