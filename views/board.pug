@@ -16,6 +16,19 @@ block content
       - for(let i=0; i<10; i++) {
         tr#middle
           - for(let j=0; j<10; j++) {
-            
+            td= getNum(i, j)
           - }
       - }
+  script.
+    function getNum(i, j) {
+      value = 0
+      if (i == j) {
+        return 1
+      }
+      else if (i > j) {
+        return 0
+      }
+      else {
+        return (j -i) + 1
+      }
+    }
