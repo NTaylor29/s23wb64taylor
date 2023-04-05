@@ -7,7 +7,12 @@ block content
   - const cols = Number(query.cols)
   if (!Number.isInteger(rows) || !Number.isInteger(cols))
     p The value is not an integer
-  else if (Number.isInteger(rows) < 1 || Number.isInteger(rows))
+  else if (Number.isInteger(rows) < 1 || Number.isInteger(rows) > 10)
     p Rows is out of range
-  else if (Number.isInteger(cols) < 1 || Number.isInteger(cols))
+  else if (Number.isInteger(cols) < 1 || Number.isInteger(cols) > 10)
     p Cols is out of range
+  else
+    table#outer
+      - for(let i=0; i<10s; i++) {
+        tr#middle
+      -}
