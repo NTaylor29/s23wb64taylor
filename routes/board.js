@@ -3,8 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render("board", { title: "board", query: query});
   let query = req.query
+  res.render("board", { title: "board", query: query});
   console.log(`rows ${query.rows}`)
   console.log(`cols ${query.cols}`)
 });
