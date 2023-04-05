@@ -4,12 +4,14 @@ block content
   h1= title
 
   - const image_names = ["doc1", "doc2", "doc3", "doc4", "doc5"]
-  - for (var n=0, n<3, n++) {
-    - var num = Math.floor(Math.random() * 5)
-    - var image_name = image_names(num)
-    - var src = `\images\${image_name.jpg}`
-    - var alt = 'Image of a ${image_name}'
-    - var height = 300
-    - var width = 400
-    img(src=src, alt=alt, height=height, width=width)
-  - }
+  div 
+    .image-container 
+      - for (var n=0, n<3, n++) {
+        - var num = Math.floor(Math.random() * 5)
+        - var image_name = image_names(num)
+        - var src = `/images/${image_name}.jpg`
+        - var alt = 'Image of a ${image_name}'
+        - var height = 300
+        - var width = 400
+        img(src=src, alt=alt, height=height, width=width)
+      - }
