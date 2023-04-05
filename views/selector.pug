@@ -4,8 +4,7 @@ block content
   h1= title
 
   - const image_names = ["doc1", "doc2", "doc3", "doc4", "doc5"]
-  .image-container 
-    - for(var n=0, n<3, n++)
-      - const num = Math.floor(Math.random() * 5)
-      - const image_name = image_names(num)
-      img(src=`\\images\\${image_name}.jpg`, alt=`${image_name} image`, width=300, height=200)
+  - for(var n=0, n<3, n++)
+    var num = Math.floor(Math.random() * 5)
+    var image_name = image_names(num)
+    img(src=`\\images\\${image_name}.jpg`, alt=`${image_name} image`, width=300, height=200)
