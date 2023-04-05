@@ -6,3 +6,11 @@ block content
   button(type='button', class='btn btn-secondary') Press Me
   div(id="reduce")
     | Reduce the value 
+  script.
+    var count = 20
+    var change = -1
+    function doReduce() {
+      change = count + change;
+      count = count - 1
+      document.getElementById('reduce') = "Count " + count + " with change " + change
+    }
